@@ -54,7 +54,7 @@ func init () {
 	}
 }
 ```
-每次挖矿都会从概率节点池中随机选出获得出块权的节点地址
+每次挖矿都会从概率节点池中随机选出获得出块权的节点地址：
 ```go
 //随机得出挖矿地址（挖矿概率跟代币数量与币龄有关）
 func getMineNodeAddress() string{
@@ -67,7 +67,7 @@ func getMineNodeAddress() string{
 	return randNodesPool[int(rInt.Int64())].address
 }
 ```
-
+创建创世区块并把创世区块添加进区块链，随后不断循环添加新的区块：
 
 ```go
 func main() {
