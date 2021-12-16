@@ -77,6 +77,7 @@ func main() {
 	//把创世区块添加进区块链
 	blockchain = append(blockchain,genesisBlock)
 	fmt.Println(blockchain[0])
+	//循环添加新的区块
 	i:=0
 	for  {
 		time.Sleep(time.Second)
